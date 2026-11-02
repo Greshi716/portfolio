@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f9fc">
+<title>Greshi Doshi | Software Engineer — Backend & AI Engineering</title>
+<meta name="description" content="Greshi Doshi is a Software Engineer focused on Java, Spring Boot, enterprise integrations and AI engineering. Explore CampusFlow, OmniCode and selected engineering work.">
+<meta property="og:title" content="Greshi Doshi | Software Engineer">
+<meta property="og:description" content="Backend engineering, enterprise integrations and practical AI engineering.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f8f9fc;--surface:#fff;--surface-2:#f1f3f9;--ink:#182033;--muted:#657087;
+  --line:#e3e7f0;--accent:#5546c7;--accent-dark:#4033a6;--accent-soft:#eeecff;
+  --green:#167a61;--green-soft:#e8f5f0;--shadow:0 18px 50px rgba(27,35,62,.08);
+  --display:"Manrope","Segoe UI",sans-serif;--body:"DM Sans","Segoe UI",sans-serif;
+  --radius:18px;--max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.7 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:4px}
+a:hover{color:var(--accent-dark)}
+button{font:inherit}
+button:focus-visible,a:focus-visible{outline:3px solid #9a91ff;outline-offset:4px}
+img{max-width:100%}
+.wrap{width:min(var(--max),calc(100% - 48px));margin-inline:auto}
+.skip-link{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;border-radius:8px;z-index:20}
+.skip-link:focus{top:12px}
+.site-header{position:sticky;top:0;z-index:10;background:rgba(248,249,252,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(227,231,240,.85)}
+.header-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font:800 1.05rem var(--display);letter-spacing:-.04em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav{display:flex;align-items:center;gap:25px}
+.nav a{font-size:.91rem;font-weight:600;color:var(--muted);text-decoration:none}
+.nav a:hover,.nav a[aria-current="location"]{color:var(--accent)}
+.nav .resume-link{color:#fff;font-style:normal}
+a[href$="Greshi_Doshi_Resume.pdf"]{font-style:normal}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:10px 17px;border:1px solid var(--accent);border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:.92rem;transition:transform .18s ease,background .18s ease,border-color .18s ease}
+.button:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff;transform:translateY(-2px)}
+.button.secondary{background:transparent;color:var(--ink);border-color:var(--line)}
+.button.secondary:hover{background:var(--surface);border-color:#c8cde0;color:var(--accent)}
+.button.small{min-height:40px;padding:8px 13px;font-size:.86rem}
+.menu-toggle{display:none;border:1px solid var(--line);background:var(--surface);border-radius:9px;width:42px;height:42px;color:var(--ink);font-size:1.25rem;cursor:pointer}
+.hero{padding:88px 0 66px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);align-items:center;gap:65px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--accent);font-weight:700;font-size:.83rem;letter-spacing:.09em;text-transform:uppercase}
+.eyebrow:before{content:"";width:24px;height:2px;background:var(--accent);border-radius:2px}
+.hero h1{font:800 clamp(3.2rem,7vw,5.8rem)/1.02 var(--display);letter-spacing:-.075em;margin:17px 0 12px}
+.hero h1 span{color:var(--accent)}
+.hero-role{font:700 clamp(1.15rem,2vw,1.5rem) var(--display);letter-spacing:-.025em}
+.hero-copy{max-width:650px;color:#46516a;font-size:1.12rem;margin-top:17px}
+.hero-copy strong{color:var(--ink);font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.social-links{display:flex;gap:20px;margin-top:24px}
+.social-links a{font-size:.92rem;font-weight:700;color:var(--muted);text-decoration:none}
+.social-links a:hover{color:var(--accent)}
+.hero-visual{position:relative;display:grid;place-items:center;min-height:330px}
+.orbit{width:min(300px,72vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;position:relative;background:radial-gradient(circle at 35% 30%,#fff 0,#f0efff 48%,#dedbff 100%);border:1px solid #e1defe;box-shadow:0 25px 70px rgba(85,70,199,.13)}
+.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(85,70,199,.17);border-radius:50%;inset:-22px}
+.orbit:after{inset:-44px;border-style:dashed;opacity:.7}
+.avatar{width:76%;aspect-ratio:1;border-radius:50%;overflow:hidden;display:grid;place-items:center;background:linear-gradient(145deg,#6557d7,#38309a);color:#fff;font:800 5rem var(--display);letter-spacing:-.08em}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.float-tag{position:absolute;padding:9px 13px;background:#fff;border:1px solid var(--line);border-radius:11px;box-shadow:var(--shadow);font-size:.8rem;font-weight:700;color:var(--ink)}
+.float-tag.one{top:18px;right:-3px}.float-tag.two{bottom:28px;left:-24px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:72px}
+.hero-stats article{padding:18px 20px;background:#fff;border:1px solid #d7dced;border-radius:14px;box-shadow:0 8px 24px rgba(27,35,62,.06)}
+.hero-stats strong{display:block;font:800 1.75rem var(--display);letter-spacing:-.05em;color:var(--accent)}
+.hero-stats span{display:block;color:var(--muted);font-size:.84rem;line-height:1.45;margin-top:3px}
+section{padding:88px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}
+.section-kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:var(--accent);margin-bottom:7px}
+h2{font:800 clamp(2rem,4vw,2.75rem)/1.15 var(--display);letter-spacing:-.055em}
+.section-intro{max-width:570px;color:var(--muted);margin-top:10px}
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
+.about-copy p{color:var(--muted);max-width:68ch}
+.about-copy p+p{margin-top:15px}
+.about-copy strong{color:var(--ink)}
+.focus-card{padding:25px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.focus-card h3{font:700 1.05rem var(--display);margin-bottom:14px}
+.focus-list{list-style:none;display:grid;gap:13px}
+.focus-list li{display:flex;gap:12px;color:var(--muted);font-size:.93rem}
+.focus-list li:before{content:"↗";flex:0 0 25px;width:25px;height:25px;border-radius:8px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800}
+.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.project-card{display:flex;flex-direction:column;min-height:310px;padding:25px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 28px rgba(27,35,62,.035);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.project-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#c9c4f4}
+.project-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:19px}
+.project-icon{width:43px;height:43px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font:800 1rem var(--display)}
+.status{display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border-radius:999px;background:var(--green-soft);color:var(--green);font-size:.7rem;font-weight:800;white-space:nowrap}
+.status:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.status.prototype{background:#fff4e5;color:#986016}
+.project-card h3{font:800 1.35rem var(--display);letter-spacing:-.04em}
+.project-card p{color:var(--muted);font-size:.94rem;margin-top:10px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;list-style:none;margin:18px 0 22px}
+.tags li{padding:5px 9px;border:1px solid var(--line);border-radius:7px;background:var(--surface-2);font-size:.75rem;font-weight:700;color:#586176}
+.project-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.text-link{display:inline-flex;align-items:center;gap:7px;font-size:.9rem;font-weight:800;text-decoration:none}
+.text-link:after{content:"↗";font-size:1rem}
+.experience-card{display:grid;grid-template-columns:190px 1fr;gap:35px;padding:32px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.experience-date{font-size:.87rem;font-weight:800;color:var(--accent)}
+.experience-type{display:inline-block;margin-top:12px;padding:5px 9px;background:var(--accent-soft);color:var(--accent);border-radius:7px;font-size:.74rem;font-weight:800}
+.experience-content h3{font:800 1.55rem var(--display);letter-spacing:-.04em}
+.company{color:var(--muted);font-weight:600;margin-top:3px}
+.experience-summary{color:var(--muted);margin-top:14px;max-width:75ch}
+.impact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:25px}
+.impact-item{padding:17px 18px;border:1px solid var(--line);border-radius:12px;background:#fcfcff}
+.impact-item h4{font:700 .96rem var(--display);margin-bottom:5px}
+.impact-item p{font-size:.88rem;color:var(--muted);line-height:1.6}
+.achievement{margin-top:18px;padding:17px 19px;background:var(--accent-soft);border-radius:12px;color:#40378f;font-size:.92rem}
+.achievement strong{font-weight:800}
+.selected-work{margin-top:55px}
+.selected-work h3{font:800 1.45rem var(--display);letter-spacing:-.04em;margin-bottom:18px}
+.work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.work-card{padding:22px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.work-card h4{font:700 1rem var(--display);margin-bottom:7px}
+.work-card p{font-size:.91rem;color:var(--muted)}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.skill-card{padding:23px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.skill-card h3{font:800 1rem var(--display);margin-bottom:14px}
+.skill-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.skill-chips li{padding:7px 11px;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;color:#4e5870;font-size:.83rem;font-weight:600}
+.education-list{display:grid;gap:12px}
+.education-item{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;padding:20px 22px;background:var(--surface);border:1px solid var(--line);border-radius:13px}
+.education-item h3{font:700 1rem var(--display)}
+.education-item p{font-size:.9rem;color:var(--muted);margin-top:3px}
+.education-score{font:800 .95rem var(--display);color:var(--accent);white-space:nowrap}
+.contact-section{padding:70px 0 80px;background:#202344;color:#fff;border:0}
+.contact-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.contact-section .section-kicker{color:#b8b1ff}
+.contact-section h2{font-size:clamp(2rem,4vw,2.7rem)}
+.contact-section p{color:#c3c6d7;margin-top:9px;max-width:52ch}
+.contact-links{display:flex;gap:10px;flex-wrap:wrap}
+.contact-section .button{background:#fff;color:#27264d;border-color:#fff}
+.contact-section .button:hover{background:#eae9ff;border-color:#eae9ff}
+.contact-section .button.secondary{background:transparent;color:#fff;border-color:#676985}
+.contact-section .button.secondary:hover{background:#303256}
+footer{padding:20px 0;color:var(--muted);font-size:.82rem}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+dialog{width:min(920px,calc(100% - 28px));max-height:min(88vh,900px);margin:auto;padding:0;border:1px solid var(--line);border-radius:20px;background:var(--bg);color:var(--ink);box-shadow:0 30px 100px rgba(12,17,39,.3);overflow:auto}
+dialog::backdrop{background:rgba(18,23,45,.62);backdrop-filter:blur(5px)}
+.dialog-head{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 28px;background:rgba(248,249,252,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.dialog-head h3{font:800 1.45rem var(--display);letter-spacing:-.04em}
+.dialog-close{border:1px solid var(--line);border-radius:9px;background:#fff;padding:8px 12px;font-weight:700;cursor:pointer;color:var(--ink)}
+.dialog-body{padding:28px}
+.dialog-lead{color:var(--muted);max-width:75ch}
+.dialog-body h4{font:800 1.03rem var(--display);margin:25px 0 9px}
+.dialog-body p{color:var(--muted)}
+.dialog-body ul,.dialog-body ol{padding-left:22px;color:var(--muted)}
+.dialog-body li{margin:6px 0}
+.dialog-tags{margin:15px 0}
+.tabs{display:flex;gap:4px;overflow:auto;border-bottom:1px solid var(--line);margin:22px 0 24px;scrollbar-width:thin}
+.tabs button{border:0;border-bottom:3px solid transparent;background:transparent;padding:12px 14px;color:var(--muted);font-weight:800;font-size:.85rem;white-space:nowrap;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+.panel[hidden]{display:none}
+.dialog-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}
+.dialog-stats article{padding:15px;background:#fff;border:1px solid var(--line);border-radius:11px}
+.dialog-stats strong{display:block;font:800 1.5rem var(--display);color:var(--accent)}
+.dialog-stats span{display:block;color:var(--muted);font-size:.78rem;line-height:1.4;margin-top:4px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.info-box{padding:18px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.info-box h4{margin:0 0 7px}
+.gates{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;list-style:none;padding:0!important;margin-top:17px}
+.gates li{padding:15px;background:#fff;border:1px solid var(--line);border-radius:11px}
+.gates b{display:block;color:var(--ink);font-size:.9rem}
+.gates span{display:block;font-size:.81rem;line-height:1.5;margin-top:4px}
+.gates .agent{background:var(--accent-soft);border-color:#d5d0ff}
+.modules,.challenge-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
+.modules article,.challenge-grid article{padding:17px;background:#fff;border:1px solid var(--line);border-radius:11px}
+.modules h5,.challenge-grid h5{font:800 .95rem var(--display);margin-bottom:7px;color:var(--accent)}
+.modules ul{font-size:.86rem}
+.flow{display:flex;gap:8px;list-style:none;padding:0!important;margin:12px 0 20px}
+.flow li{flex:1;padding:12px;background:#fff;border:1px solid var(--line);border-radius:9px;font-size:.82rem;line-height:1.5}
+.flow li.warn{background:var(--accent-soft);border-color:#c9c2ff;color:#40378f;font-weight:700}
+.table-wrap{overflow-x:auto;margin-top:12px}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);font-size:.87rem}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--surface-2);font:800 .78rem var(--display);color:var(--muted)}
+tbody th{font:700 .86rem var(--display);white-space:nowrap}
+.note{padding:14px 16px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 9px 9px 0;margin-top:15px;color:#40378f}
+.steps-list li{margin:10px 0!important}
+.legend-row{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.8rem;color:var(--muted);margin-top:12px}
+.legend-row span{display:inline-flex;align-items:center;gap:6px}
+.legend-row i{width:12px;height:12px;border-radius:3px;border:1px solid rgba(24,32,51,.25);display:inline-block}
+.diagram{overflow-x:auto;margin-top:15px;padding:12px;background:#fff;border:1px solid var(--line);border-radius:12px}
+.diagram svg{display:block;min-width:680px;width:100%;height:auto}
+.diagram text{font-family:var(--display);font-size:13px;font-weight:600;fill:var(--ink)}
+.diagram .sub{font-family:var(--body);font-size:11px;font-weight:400;fill:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}
+.gallery img{width:100%;display:block;border:1px solid var(--line);border-radius:10px}
+.video{margin-top:18px;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#111}
+.video iframe,.video video{width:100%;height:100%;border:0;display:block}
+.dialog-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+@media(max-width:900px){
+  .nav{gap:15px}.nav a{font-size:.85rem}
+  .hero-grid{gap:35px}.project-grid{grid-template-columns:1fr 1fr}
+  .experience-card{grid-template-columns:145px 1fr;gap:22px}
+}
+@media(max-width:700px){
+  .wrap{width:min(100% - 34px,var(--max))}
+  .header-inner{height:68px}.menu-toggle{display:block}
+  .nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 24px 22px;background:var(--bg);border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:15px}
+  .nav.open{display:flex}.nav a{font-size:.95rem}.nav .resume-link{align-self:flex-start}
+  .hero{padding:55px 0 50px}.hero-grid{grid-template-columns:1fr;gap:25px}
+  .hero-visual{min-height:210px;grid-row:1}.orbit{width:175px}.avatar{font-size:3.2rem}.float-tag.one{right:calc(50% - 120px)}.float-tag.two{left:calc(50% - 130px)}
+  .hero h1{font-size:clamp(3rem,14vw,4.4rem)}
+  .hero-stats{grid-template-columns:1fr 1fr;margin-top:45px}
+  section{padding:65px 0}.section-head{display:block;margin-bottom:25px}
+  .about-grid{grid-template-columns:1fr;gap:24px}.project-grid{grid-template-columns:1fr}
+  .experience-card{grid-template-columns:1fr;gap:12px;padding:23px}
+  .impact-grid,.work-grid,.skills-grid,.two-col,.modules,.challenge-grid{grid-template-columns:1fr}
+  .contact-inner{display:block}.contact-links{margin-top:22px}
+  .dialog-head{padding:17px 18px}.dialog-body{padding:20px 18px}
+  .dialog-stats{grid-template-columns:1fr 1fr}.gates{grid-template-columns:1fr 1fr}
+  .flow{flex-direction:column}.education-item{grid-template-columns:1fr;gap:4px}
+}
+@media(max-width:420px){
+  .hero-stats{gap:8px}.hero-stats article{padding:13px}.hero-stats strong{font-size:1.45rem}
+  .hero-actions .button{width:100%}.gates{grid-template-columns:1fr}
+  .dialog-stats{grid-template-columns:1fr 1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">Greshi<span>.</span></a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav class="nav" id="main-nav" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a>
+      <a class="button small resume-link" href="Greshi_Doshi_Resume.pdf" download>Download resume ↓</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap hero" id="top">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Software Engineer · Ahmedabad, India</p>
+      <h1>Greshi <span>Doshi</span></h1>
+      <p class="hero-role">Backend Engineering &amp; Applied AI</p>
+      <p class="hero-copy">I build <strong>reliable backend systems and enterprise integrations</strong> with Java and Spring Boot. I’m also exploring practical AI engineering through LLM agents, MCP, RAG and structured, AI-assisted development.</p>
+      <div class="hero-actions">
+        <a class="button" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+        <a class="button secondary" href="Greshi_Doshi_Resume.pdf" download>Download resume</a>
+      </div>
+      <div class="social-links" id="hero-social" aria-label="Social profiles"></div>
+    </div>
+    <div class="hero-visual">
+      <div class="orbit"><div class="avatar" id="avatar" aria-label="Greshi Doshi initials">GD</div></div>
+      <span class="float-tag one">Java · Spring Boot</span>
+      <span class="float-tag two">LLMs · MCP · RAG</span>
+    </div>
+  </div>
+  <div class="hero-stats" aria-label="Career highlights">
+    <article><strong>2+ years</strong><span>Customer-facing software engineering</span></article>
+    <article><strong>100K+</strong><span>Entities handled through reliability improvements</span></article>
+    <article><strong>4</strong><span>Major feature deliveries at OpsHub</span></article>
+    <article><strong>1st runner-up</strong><span>2025 company hackathon</span></article>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head"><div><p class="section-kicker">A little about me</p><h2>Engineering with a focus on outcomes.</h2></div></div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>I’m a Software Engineer at <strong>OpsHub</strong>, where I work on backend development, enterprise integrations and customer-facing engineering. My work spans Java and Spring Boot development, extending core framework capabilities, solving production issues and turning customer requirements into practical technical solutions.</p>
+        <p>I enjoy taking ownership of problems end to end—from understanding a customer’s workflow and investigating an issue to designing, implementing and demonstrating a solution. I’ve also contributed to mentoring and technical knowledge-sharing within the team.</p>
+        <p>Alongside my professional work, I’m building projects that deepen my experience in <strong>AI engineering and agentic software development</strong>. CampusFlow explores specification-led product development, while OmniCode investigates privacy-aware ways to use cloud reasoning with on-premises code analysis.</p>
+      </div>
+      <aside class="focus-card">
+        <h3>What I’m focused on</h3>
+        <ul class="focus-list">
+          <li>Designing dependable Java and Spring Boot services.</li>
+          <li>Building and troubleshooting enterprise integrations.</li>
+          <li>Applying LLMs, agents, MCP and RAG to engineering workflows.</li>
+          <li>Using specifications, automated tests and independent reviews to improve delivery quality.</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head"><div><p class="section-kicker">Selected projects</p><h2>Things I’m building.</h2><p class="section-intro">A mix of practical product development and experiments in AI-assisted engineering. Project status is stated openly.</p></div></div>
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-top"><span class="project-icon">CF</span><span class="status">In progress</span></div>
+        <h3>CampusFlow</h3>
+        <p>A school administration platform shaped around real operational workflows, with feature-by-feature specifications, implementation plans and independent test and review stages.</p>
+        <ul class="tags"><li>Spring Boot</li><li>PostgreSQL</li><li>GitHub Spec Kit</li><li>Claude Code</li></ul>
+        <div class="project-actions"><button class="button small" type="button" data-open="dlg-cf">Explore project ↗</button><a class="text-link" href="https://github.com/Greshi716/admin_management_system" target="_blank" rel="noopener">GitHub</a></div>
+      </article>
+      <article class="project-card">
+        <div class="project-top"><span class="project-icon">OC</span><span class="status prototype">Working prototype</span></div>
+        <h3>OmniCode</h3>
+        <p id="oc-card-summary">A prototype exploring how a cloud reasoning model can investigate a proprietary codebase using masked metadata and controlled on-premises analysis.</p>
+        <ul class="tags" id="oc-card-tags"><li>MCP</li><li>Claude Code</li><li>Tree-sitter</li><li>On-prem LLM</li></ul>
+        <div class="project-actions"><button class="button small" type="button" data-open="dlg-oc">Explore project ↗</button><a class="text-link" href="https://github.com/Greshi716/omnicode_sample_codebase" target="_blank" rel="noopener">GitHub</a></div>
+      </article>
+      <article class="project-card">
+        <div class="project-top"><span class="project-icon">Q&amp;A</span><span class="status">Built workflow</span></div>
+        <h3>Document Q&amp;A Chatbot</h3>
+        <p>A retrieval-augmented question-answering workflow in Dify that ingests Markdown documents and uses their content to answer user questions.</p>
+        <ul class="tags"><li>Dify</li><li>RAG</li><li>LLMs</li></ul>
+        <div class="project-actions"><a class="text-link" href="https://dify.ai/" target="_blank" rel="noopener">About Dify</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CampusFlow project detail -->
+<dialog id="dlg-cf" aria-labelledby="cf-title">
+  <div class="dialog-head"><h3 id="cf-title">CampusFlow <span class="status">In progress</span></h3><button class="dialog-close" type="button" data-close>Close ✕</button></div>
+  <div class="dialog-body">
+    <p class="dialog-lead">A school administration product being developed around the workflows of a real school. The scope includes students, admissions, fees and receipts, staff, payroll, expenses and reporting. Features are specified and delivered incrementally.</p>
+    <ul class="tags dialog-tags"><li>Spring Boot</li><li>PostgreSQL</li><li>GitHub Spec Kit</li><li>Claude Code</li><li>Spec-Driven Development</li></ul>
+    <div class="tabs" role="tablist" aria-label="CampusFlow project details">
+      <button role="tab" aria-selected="true" aria-controls="cf-p1" id="cf-t1">Overview</button>
+      <button role="tab" aria-selected="false" aria-controls="cf-p2" id="cf-t2" tabindex="-1">Development process</button>
+      <button role="tab" aria-selected="false" aria-controls="cf-p3" id="cf-t3" tabindex="-1">Features</button>
+      <button role="tab" aria-selected="false" aria-controls="cf-p4" id="cf-t4" tabindex="-1">Business rules</button>
+      <button role="tab" aria-selected="false" aria-controls="cf-p5" id="cf-t5" tabindex="-1">Tooling</button>
+      <button role="tab" aria-selected="false" aria-controls="cf-p6" id="cf-t6" tabindex="-1">Challenges</button>
+    </div>
+    <div role="tabpanel" id="cf-p1" aria-labelledby="cf-t1" class="panel">
+      <div class="dialog-stats">
+        <article><strong>4 GB</strong><span>RAM on the school's office PC</span></article>
+        <article><strong>v1.1</strong><span>Client agreement defined before feature specs</span></article>
+        <article><strong>≤30</strong><span>Tasks per feature to keep work reviewable</span></article>
+        <article><strong>4</strong><span>Dedicated test and review subagent roles</span></article>
+      </div>
+      <div class="two-col">
+        <article class="info-box"><h4>The problem</h4><p>The school has a small, non-technical administration team and a single modest office PC. Its records and processes need to move from manual and spreadsheet-based work into a system that is straightforward to operate and maintain.</p></article>
+        <article class="info-box"><h4>My approach</h4><p>I documented business rules in a client agreement before implementation, then organised development into small, independently specified features. Financial workflows receive particular attention because fee and receipt errors directly affect school records.</p></article>
+      </div>
+      <h4>High-level architecture</h4>
+      <div class="diagram"><svg viewBox="0 0 900 250" role="img" aria-label="Admission form data can be exported and imported into the web application. The web app communicates with a Spring Boot API and PostgreSQL database, and supports printed receipts.">
+        <defs><marker id="cf-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#657087"/></marker></defs>
+        <g stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#cf-arrow)"><path d="M200 60H225V110H250"/><path d="M430 125H480"/><path d="M660 125H710"/><path d="M340 155V200H400"/></g>
+        <g fill="#fff" stroke="#c9c5ee" stroke-width="1.4"><rect x="20" y="30" width="180" height="60" rx="9"/><rect x="250" y="95" width="180" height="60" rx="9" fill="#eeecff" stroke="#5546c7"/><rect x="480" y="95" width="180" height="60" rx="9" fill="#eeecff" stroke="#5546c7"/><rect x="710" y="95" width="170" height="60" rx="9"/><rect x="400" y="180" width="180" height="50" rx="9"/></g>
+        <text x="110" y="55" text-anchor="middle">Google Form</text><text class="sub" x="110" y="73" text-anchor="middle">Admission responses</text>
+        <text x="340" y="120" text-anchor="middle">Web application</text><text class="sub" x="340" y="138" text-anchor="middle">Admin and dashboard</text>
+        <text x="570" y="120" text-anchor="middle">Spring Boot API</text><text class="sub" x="570" y="138" text-anchor="middle">Business rules</text>
+        <text x="795" y="120" text-anchor="middle">PostgreSQL</text><text class="sub" x="795" y="138" text-anchor="middle">School records</text>
+        <text x="490" y="210" text-anchor="middle">Printed receipts</text><text class="sub" x="232" y="86">Spreadsheet import</text>
+      </svg></div>
+    </div>
+    <div role="tabpanel" id="cf-p2" aria-labelledby="cf-t2" class="panel" hidden>
+      <p>Each feature follows a repeatable sequence. The client agreement establishes the business rules; the specification defines expected behaviour; implementation and independent verification follow.</p>
+      <ol class="gates">
+        <li><b>1. Client agreement</b><span>Document scope, terminology and business rules.</span></li>
+        <li><b>2. Feature specification</b><span>Define acceptance scenarios and clarify open questions.</span></li>
+        <li><b>3. Plan and tasks</b><span>Describe data, API and UI changes; split work into manageable tasks.</span></li>
+        <li class="agent"><b>4. Test planning</b><span>A separate subagent derives test scenarios from the specification.</span></li>
+        <li><b>5. Implementation</b><span>Implement feature tasks using project rules and hooks.</span></li>
+        <li class="agent"><b>6. Test writing</b><span>A separate role creates tests for the implemented behaviour.</span></li>
+        <li class="agent"><b>7. Test execution</b><span>A runner executes the suite and reports failures.</span></li>
+        <li class="agent"><b>8. Review</b><span>A reviewer checks the changes against the spec and project rules.</span></li>
+        <li><b>9. Release</b><span>After verification, push the branch and create the release tag.</span></li>
+      </ol>
+      <p class="note"><strong>Feedback loop:</strong> failed checks return to implementation for correction and are rerun before the feature is considered complete.</p>
+      <h4>Why split the agent roles?</h4>
+      <ul><li>The test planner works from the specification rather than implementation details, helping reduce shared assumptions.</li><li>Separate test-writing, execution and review responsibilities provide distinct verification steps.</li><li>A task limit of 30 keeps feature work easier to inspect and manage.</li></ul>
+    </div>
+    <div role="tabpanel" id="cf-p3" aria-labelledby="cf-t3" class="panel" hidden>
+      <p>The agreement covers the following product areas. They are delivered incrementally as the project progresses.</p>
+      <div class="modules">
+        <article><h5>Students</h5><ul><li>Admin-entered GR number and system serial</li><li>Student photo and detailed profile</li><li>Duplicate-name warning</li><li>New GR number for returning students</li></ul></article>
+        <article><h5>Admissions</h5><ul><li>Spreadsheet import of Google Form responses</li><li>Admin review and approval</li><li>Manual admission entry</li></ul></article>
+        <article><h5>Fees</h5><ul><li>Fee amounts by standard and category</li><li>Flexible payment amounts and dates</li><li>Registration fee handling</li><li>Previous-year pending dues</li></ul></article>
+        <article><h5>Receipts</h5><ul><li>Admin-entered receipt number and date</li><li>Separate registration-fee row</li><li>Overpayment validation</li><li>No receipt editing or cancellation</li></ul></article>
+        <article><h5>Staff and payroll</h5><ul><li>Staff records</li><li>Payroll preparation and reports</li></ul></article>
+        <article><h5>Expenses and fund</h5><ul><li>Expense entry</li><li>Fund tracking</li></ul></article>
+        <article><h5>Dashboard and reports</h5><ul><li>Graphs filtered by academic year, standard, division, category and month range</li><li>Fee and payroll reports</li><li>Separate dashboard and admin experiences</li></ul></article>
+        <article><h5>Setup and access</h5><ul><li>Academic year based on the current date</li><li>Generated initial admin password with forced change</li><li>Password reset handled by the developer</li></ul></article>
+      </div>
+    </div>
+    <div role="tabpanel" id="cf-p4" aria-labelledby="cf-t4" class="panel" hidden>
+      <p>Fee and receipt behaviour was defined before coding, including the less common cases that can otherwise create inconsistent financial records.</p>
+      <h4>Revising a fee structure</h4>
+      <ol class="flow"><li>Admin enters fee amounts by standard and category.</li><li>Admin finalises the academic year.</li><li class="warn">A revision warns that student fees for that year will be recalculated.</li><li>Admin confirms the revision.</li><li>Fees are recalculated; existing receipts remain unchanged.</li></ol>
+      <h4>Handling a cheque</h4>
+      <ol class="flow"><li>Admin enters receipt number and date and confirms before saving.</li><li>Cheque is counted as paid when received.</li><li class="warn">If it bounces, it is marked as not cleared.</li><li>The amount is added back to the outstanding balance.</li><li>The reversal is recorded in the audit log.</li></ol>
+      <h4>Other agreed rules</h4>
+      <ul><li>Payments can be made in any amount at any time. The “fees paid up to” date is derived from total paid and the daily fee from the academic-year start.</li><li>Receipts cannot be edited or cancelled, and overpayment is rejected.</li><li>The current academic year is determined from today's date; an applicable year must exist.</li><li>Standard and category cannot change within a finalised year, while division can.</li><li>Late fees, caution money and mid-year admission are explicitly out of scope.</li></ul>
+    </div>
+    <div role="tabpanel" id="cf-p5" aria-labelledby="cf-t5" class="panel" hidden>
+      <p>The development workflow is represented in repository files and repeatable commands so that project conventions and checks are visible and version-controlled.</p>
+      <div class="table-wrap"><table><thead><tr><th>Tooling</th><th>Purpose</th></tr></thead><tbody>
+        <tr><th>GitHub Spec Kit</th><td>Project constitution and feature-level specifications, plans and task lists.</td></tr>
+        <tr><th>Project rules</th><td>Guidance for architecture layers, financial data, testing and review.</td></tr>
+        <tr><th>Subagents</th><td>Separate roles for test planning, test writing, test execution and review.</td></tr>
+        <tr><th>Hooks</th><td>Automated checks at defined points in the development workflow.</td></tr>
+        <tr><th>Slash commands</th><td>Repeatable commands for common development and release steps.</td></tr>
+        <tr><th>MCP tools</th><td>Connected tools for documentation lookup and repository workflows.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div role="tabpanel" id="cf-p6" aria-labelledby="cf-t6" class="panel" hidden>
+      <div class="challenge-grid">
+        <article><h5>Defining financial rules</h5><p><strong>Challenge:</strong> Payments can arrive in varying amounts and at different times, but outstanding fees must remain understandable.</p><p><strong>Approach:</strong> Agree on the “fees paid up to” calculation and edge cases before implementation.</p></article>
+        <article><h5>Designing for modest hardware</h5><p><strong>Challenge:</strong> The school has one 4 GB PC and limited technical support.</p><p><strong>Approach:</strong> Reconsidered a Docker-first setup when its operational complexity did not suit the school, and prioritised a simpler installation experience.</p></article>
+        <article><h5>Making agentic development verifiable</h5><p><strong>Challenge:</strong> A single long AI session can share assumptions across implementation and testing.</p><p><strong>Approach:</strong> Separate test planning, test writing, execution and review, with smaller feature task lists.</p></article>
+        <article><h5>Supporting existing admission processes</h5><p><strong>Challenge:</strong> The form and student data were not yet available as a complete automated source.</p><p><strong>Approach:</strong> Support spreadsheet import and admin approval first; leave automatic fetching for later.</p></article>
+      </div>
+    </div>
+    <div class="gallery" id="cf-gallery"></div>
+    <div class="dialog-links" id="cf-links"></div>
+  </div>
+</dialog>
+
+<!-- OmniCode project detail -->
+<dialog id="dlg-oc" aria-labelledby="oc-title">
+  <div class="dialog-head"><h3 id="oc-title">OmniCode <span class="status prototype">Working prototype</span></h3><button class="dialog-close" type="button" data-close>Close ✕</button></div>
+  <div class="dialog-body">
+    <p class="dialog-lead" id="oc-summary"></p>
+    <ul class="tags dialog-tags" id="oc-tags"></ul>
+    <div class="tabs" role="tablist" aria-label="OmniCode project details">
+      <button role="tab" aria-selected="true" aria-controls="oc-p1" id="oc-t1">Overview</button>
+      <button role="tab" aria-selected="false" aria-controls="oc-p2" id="oc-t2" tabindex="-1">Architecture</button>
+            <button role="tab" aria-selected="false" aria-controls="oc-p4" id="oc-t4" tabindex="-1">Request flow</button>
+      <button role="tab" aria-selected="false" aria-controls="oc-p5" id="oc-t5" tabindex="-1">Retrieval</button>
+      <button role="tab" aria-selected="false" aria-controls="oc-p3" id="oc-t3" tabindex="-1">Privacy model</button>
+      <button role="tab" aria-selected="false" aria-controls="oc-p6" id="oc-t6" tabindex="-1">Evals</button>
+      <button role="tab" aria-selected="false" aria-controls="oc-p7" id="oc-t7" tabindex="-1">Build and deploy</button>
+    </div>
+    <div role="tabpanel" id="oc-p1" aria-labelledby="oc-t1" class="panel">
+      <div class="two-col">
+        <article class="info-box"><h4>The problem</h4><p>Teams may not be able to send proprietary source code to public AI models. At the same time, a smaller on-premises model may not be as effective at planning a multi-step investigation. The challenge is to combine cloud reasoning with controlled access to local code.</p></article>
+        <article class="info-box"><h4>The approach</h4><p>Separate reasoning from source-code access. The cloud model works with pseudonymised metadata and tool results. A local model can inspect real code for narrow questions, while its response is masked before it is returned to the cloud reasoning flow.</p></article>
+      </div>
+      <div class="dialog-stats">
+        <article><strong>3</strong><span>Core layers: MCP server, agent host, UI and gateway</span></article>
+        <article><strong>8</strong><span>Typed tools exposed to the agent</span></article>
+        <article><strong>Local</strong><span>Source-code analysis stays on-premises by design</span></article>
+        <article><strong>Prototype</strong><span>Accuracy and privacy require further validation</span></article>
+      </div>
+      <p class="note"><strong>Current status:</strong> Working prototype. Answer accuracy has not yet been benchmarked, and the privacy design should not be interpreted as a formally verified zero-leakage guarantee.</p>
+      <div class="video" id="oc-video" hidden></div>
+      <div class="gallery" id="oc-gallery"></div>
+      <div class="dialog-links" id="oc-links"></div>
+    </div>
+    <div role="tabpanel" id="oc-p2" aria-labelledby="oc-t2" class="panel" hidden>
+      <p>The user question is pseudonymised before it enters the cloud reasoning flow. The MCP layer owns repository access and invokes local analysis when needed. De-masking happens only on-premises: inside the MCP layer, to resolve names for local lookups, and in the user's interface for display.</p>
+      <div class="diagram"><svg viewBox="0 0 900 420" role="img" aria-label="OmniCode architecture: user interface and gateway mask requests; an agent host communicates with a cloud reasoning model and an MCP server. The MCP server accesses the code index, name vault, masker and scanner, and can query an on-premises model. Responses are de-masked in the UI.">
+        <defs><marker id="oc-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#657087"/></marker></defs>
+        <rect x="10" y="115" width="880" height="295" rx="12" fill="#f1f0ff" stroke="#5546c7" stroke-dasharray="6 5" stroke-width="1.5"/>
+        <text x="30" y="142" style="font-weight:700;fill:#5546c7">On-premises environment</text>
+        <g fill="#fff" stroke="#c9c5ee" stroke-width="1.2"><rect x="245" y="12" width="170" height="70" rx="8" stroke="#182033" stroke-width="1.5"/><rect x="30" y="170" width="170" height="70" rx="8" fill="#eeecff" stroke="#5546c7"/><rect x="245" y="170" width="170" height="70" rx="8" fill="#eeecff" stroke="#5546c7"/><rect x="460" y="170" width="170" height="70" rx="8" fill="#eeecff" stroke="#5546c7"/><rect x="690" y="160" width="180" height="90" rx="8"/><rect x="30" y="320" width="170" height="70" rx="8"/><rect x="460" y="320" width="170" height="70" rx="8"/></g>
+        <text x="330" y="40" text-anchor="middle">Cloud reasoning model</text><text class="sub" x="330" y="58" text-anchor="middle">Plans and writes answers</text><text class="sub" x="330" y="72" text-anchor="middle">Pseudonyms only</text>
+        <text x="115" y="198" text-anchor="middle">UI and gateway</text><text class="sub" x="115" y="216" text-anchor="middle">Mask request;</text><text class="sub" x="115" y="230" text-anchor="middle">display decoded answer</text>
+        <text x="330" y="198" text-anchor="middle">Agent host</text><text class="sub" x="330" y="216" text-anchor="middle">Orchestrates model</text><text class="sub" x="330" y="230" text-anchor="middle">and tool calls</text>
+        <text x="545" y="198" text-anchor="middle">MCP server</text><text class="sub" x="545" y="216" text-anchor="middle">Typed tools and</text><text class="sub" x="545" y="230" text-anchor="middle">masked results</text>
+        <text x="780" y="184" text-anchor="middle">Local resources</text><text class="sub" x="780" y="206" text-anchor="middle">Code index and call graph</text><text class="sub" x="780" y="222" text-anchor="middle">Name vault and scanner</text><text class="sub" x="780" y="238" text-anchor="middle">Masking and audit log</text>
+        <text x="115" y="348" text-anchor="middle">User</text><text class="sub" x="115" y="366" text-anchor="middle">Asks and views results</text>
+        <text x="545" y="348" text-anchor="middle">On-prem model</text><text class="sub" x="545" y="366" text-anchor="middle">Narrow code questions</text><text class="sub" x="545" y="380" text-anchor="middle">using local source</text>
+        <g stroke="#657087" stroke-width="1.5" fill="none"><path d="M330 170V82" marker-start="url(#oc-arrow)" marker-end="url(#oc-arrow)"/><path d="M115 320V240" marker-end="url(#oc-arrow)"/><path d="M200 205H245" marker-end="url(#oc-arrow)"/><path d="M415 205H460" marker-end="url(#oc-arrow)"/><path d="M545 240V320" marker-start="url(#oc-arrow)" marker-end="url(#oc-arrow)"/><path d="M630 205H690" stroke-dasharray="3 3"/></g>
+        <text class="sub" x="345" y="132">Masked prompts and responses</text><text class="sub" x="125" y="285">User request</text><text class="sub" x="555" y="285">Narrow local query</text>
+      </svg></div>
+      <h4>Component responsibilities</h4>
+      <div class="table-wrap"><table><thead><tr><th>Component</th><th>Responsibility</th><th>Source access</th></tr></thead><tbody>
+        <tr><th>MCP server</th><td>Repository index, name vault, masking/scanning and controlled tools.</td><td>Local access</td></tr>
+        <tr><th>Agent host</th><td>Orchestrates the reasoning model and the permitted tool workflow.</td><td>Metadata and tool results</td></tr>
+        <tr><th>UI and gateway</th><td>Authentication, uploads, run visibility and display-time de-masking.</td><td>Controlled local access</td></tr>
+        <tr><th>On-prem model</th><td>Handles narrow questions that require reading actual code.</td><td>Local access</td></tr>
+        <tr><th>Cloud model</th><td>Plans the investigation and composes an answer from masked context.</td><td>No intended source-code access</td></tr>
+      </tbody></table></div>
+    </div>
+    <div role="tabpanel" id="oc-p3" aria-labelledby="oc-t3" class="panel" hidden>
+      <p>The prototype uses multiple controls to reduce the chance of proprietary code or identifying names entering the cloud reasoning context.</p>
+      <ol class="steps-list">
+        <li><strong>Prompt masking.</strong> User input is masked and scanned against the repository index. A detected unmasked repository identifier can block the run.</li>
+        <li><strong>Restricted agent tools.</strong> Built-in file, shell and web capabilities are denied; the agent is intended to use only the exposed OmniCode tools.</li>
+        <li><strong>Eight typed tools.</strong> Tools cover code search, call graph, file listing, log analysis, database schema, workflow steps, documentation search and on-premises questions.</li>
+        <li><strong>Masked tool results.</strong> Results are masked and scanned before they are passed back into the cloud reasoning context. Unresolved content can be withheld.</li>
+        <li><strong>Local code questions.</strong> Questions requiring source-level understanding are delegated to the on-premises model, with its response masked before returning.</li>
+        <li><strong>Display-time de-masking.</strong> Real names are restored for display in the authorised interface after the cloud model has completed its work.</li>
+        <li><strong>Audit trail.</strong> Tool calls, blocks and de-masking events are logged to support inspection of the workflow.</li>
+      </ol>
+      <div class="two-col">
+        <article class="info-box"><h4>Designed to stay local</h4><ul><li>Source code bodies</li><li>Mapping between real names and pseudonyms</li><li>Raw logs and uploads</li><li>Raw prompts and answers used for local model analysis</li></ul></article>
+        <article class="info-box"><h4>Intended cloud context</h4><ul><li>Masked user questions</li><li>Masked tool results such as signatures, call graphs and schema metadata</li><li>Reasoning and generated answers expressed using pseudonyms</li></ul></article>
+      </div>
+    </div>
+    <div role="tabpanel" id="oc-p4" aria-labelledby="oc-t4" class="panel" hidden>
+      <p>One question travels through three layers. Names are masked on the way out, the cloud model only ever sees pseudonyms, and each hop has its own guardrail. Pink dots mark steps that write to the audit trail.</p>
+      <p class="legend-row"><span><i style="background:#f1f0ff"></i>UI and gateway</span><span><i style="background:#eaf3fb"></i>Claude host</span><span><i style="background:#e8f5f0"></i>MCP server</span><span><i style="background:#fff4e5"></i>Guardrail</span><span><i style="background:#d4537e"></i>Audited step</span></p>
+      <div class="diagram"><svg viewBox="0 0 900 1074" role="img" aria-label="OmniCode end-to-end request flow with guardrails and audited steps, from the UI request through masking, headless Claude, hooks, MCP tools and back to a demasked answer.">
+<defs><marker id="e2e-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#657087"/></marker></defs>
+<text x="214.0" y="18" text-anchor="middle" style="fill:#657087;font-size:12px">What happens</text><text x="656.0" y="18" text-anchor="middle" style="fill:#657087;font-size:12px">Guardrail</text>
+<rect x="4" y="40" width="892" height="276" rx="12" fill="#f1f0ff" stroke="#5546c7" stroke-width="1.2"/>
+<text x="24" y="61" style="font-weight:700;fill:#5546c7">Layer 1 · UI and gateway</text>
+<rect x="4" y="334" width="892" height="152" rx="12" fill="#eaf3fb" stroke="#3b78b5" stroke-width="1.2"/>
+<text x="24" y="355" style="font-weight:700;fill:#3b78b5">Layer 2 · Claude host (headless)</text>
+<rect x="4" y="504" width="892" height="338" rx="12" fill="#e8f5f0" stroke="#167a61" stroke-width="1.2"/>
+<text x="24" y="525" style="font-weight:700;fill:#167a61">Layer 3 · MCP server (on-premises)</text>
+<rect x="4" y="860" width="892" height="90" rx="12" fill="#eaf3fb" stroke="#3b78b5" stroke-width="1.2"/>
+<text x="24" y="881" style="font-weight:700;fill:#3b78b5">Layer 2 · Claude host (headless)</text>
+<rect x="4" y="968" width="892" height="90" rx="12" fill="#f1f0ff" stroke="#5546c7" stroke-width="1.2"/>
+<text x="24" y="989" style="font-weight:700;fill:#5546c7">Layer 1 · UI and gateway</text>
+<rect x="24" y="72" width="380" height="46" rx="8" fill="#fff" stroke="#c9c5ee" stroke-width="1.3"/>
+<text x="214.0" y="91" text-anchor="middle">UI request</text><text class="sub" x="214.0" y="108" text-anchor="middle">Prompt, folders, logs, stack traces</text>
+<path d="M404 95H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="72" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="99" text-anchor="middle" style="fill:#182033;font-size:12px">Login required; upload type and size limits</text>
+<path d="M214.0 118V132" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="134" width="380" height="46" rx="8" fill="#fff" stroke="#c9c5ee" stroke-width="1.3"/>
+<text x="214.0" y="153" text-anchor="middle">Create sessionId and open the vault</text><text class="sub" x="214.0" y="170" text-anchor="middle">Private table: real name ↔ token, one per session</text>
+<path d="M404 157H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="134" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="161" text-anchor="middle" style="fill:#182033;font-size:12px">Session is bound to the user who created it</text>
+<circle cx="14" cy="157" r="4.5" fill="#d4537e"/>
+<path d="M214.0 180V194" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="196" width="380" height="46" rx="8" fill="#fff" stroke="#c9c5ee" stroke-width="1.3"/>
+<text x="214.0" y="215" text-anchor="middle">Find and mask names</text><text class="sub" x="214.0" y="232" text-anchor="middle">Words matched against the repo symbol index</text>
+<path d="M404 219H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="196" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="223" text-anchor="middle" style="fill:#182033;font-size:12px">The index decides what is sensitive; same name, same token</text>
+<path d="M214.0 242V256" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="258" width="380" height="46" rx="8" fill="#fff" stroke="#c9c5ee" stroke-width="1.3"/>
+<text x="214.0" y="277" text-anchor="middle">Scan before anything leaves</text><text class="sub" x="214.0" y="294" text-anchor="middle">No repo name or secret may pass</text>
+<path d="M404 281H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="258" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="285" text-anchor="middle" style="fill:#182033;font-size:12px">Run is blocked if anything survives the scan</text>
+<path d="M392 304V366" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="366" width="380" height="46" rx="8" fill="#fff" stroke="#a9c8e6" stroke-width="1.3"/>
+<text x="214.0" y="385" text-anchor="middle">Claude plans with 8 tools</text><text class="sub" x="214.0" y="402" text-anchor="middle">Code, call graph, logs, docs, workflow, schema, files, on-prem</text>
+<path d="M404 389H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="366" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="393" text-anchor="middle" style="fill:#182033;font-size:12px">No shell, file or web tools for the agent</text>
+<circle cx="14" cy="389" r="4.5" fill="#d4537e"/>
+<path d="M214.0 412V426" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="428" width="380" height="46" rx="8" fill="#fff" stroke="#a9c8e6" stroke-width="1.3"/>
+<text x="214.0" y="447" text-anchor="middle">Tool call and pre-tool hook</text><text class="sub" x="214.0" y="464" text-anchor="middle">Runner attaches the sessionId; other tools are blocked</text>
+<path d="M404 451H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="428" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="455" text-anchor="middle" style="fill:#182033;font-size:12px">Hook fails closed; Claude never sets the sessionId</text>
+<circle cx="14" cy="451" r="4.5" fill="#d4537e"/>
+<path d="M392 474V536" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="536" width="380" height="46" rx="8" fill="#fff" stroke="#a7d4c6" stroke-width="1.3"/>
+<text x="214.0" y="555" text-anchor="middle">Open the vault, unmask names</text><text class="sub" x="214.0" y="572" text-anchor="middle">Tokens become real names, on-premises only</text>
+<path d="M404 559H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="536" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="563" text-anchor="middle" style="fill:#182033;font-size:12px">Real names stay inside the MCP server</text>
+<circle cx="14" cy="559" r="4.5" fill="#d4537e"/>
+<path d="M214.0 582V596" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="598" width="380" height="46" rx="8" fill="#fff" stroke="#a7d4c6" stroke-width="1.3"/>
+<text x="214.0" y="617" text-anchor="middle">Retrieve</text><text class="sub" x="214.0" y="634" text-anchor="middle">Keywords + call graph + meaning, merged into the top 10</text>
+<path d="M404 621H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="598" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="625" text-anchor="middle" style="fill:#182033;font-size:12px">Read-only and scoped to the indexed repository</text>
+<path d="M214.0 644V658" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="660" width="380" height="46" rx="8" fill="#fff" stroke="#a7d4c6" stroke-width="1.3"/>
+<text x="214.0" y="679" text-anchor="middle">Ask on-prem (only this tool)</text><text class="sub" x="214.0" y="696" text-anchor="middle">A local model reads real code for a narrow question</text>
+<path d="M404 683H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="660" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="687" text-anchor="middle" style="fill:#182033;font-size:12px">Injection check, output cap, code-dump block, call limit</text>
+<circle cx="14" cy="683" r="4.5" fill="#d4537e"/>
+<path d="M214.0 706V720" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="722" width="380" height="46" rx="8" fill="#fff" stroke="#a7d4c6" stroke-width="1.3"/>
+<text x="214.0" y="741" text-anchor="middle">Mask and scan the result</text><text class="sub" x="214.0" y="758" text-anchor="middle">Names back to tokens; scanner blocks leftovers</text>
+<path d="M404 745H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="722" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="749" text-anchor="middle" style="fill:#182033;font-size:12px">Secrets redacted for good; reply withheld on any leak</text>
+<circle cx="14" cy="745" r="4.5" fill="#d4537e"/>
+<path d="M214.0 768V782" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="784" width="380" height="46" rx="8" fill="#fff" stroke="#a7d4c6" stroke-width="1.3"/>
+<text x="214.0" y="803" text-anchor="middle">Limit and paginate</text><text class="sub" x="214.0" y="820" text-anchor="middle">Small answer now, next page on request</text>
+<path d="M404 807H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="784" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="811" text-anchor="middle" style="fill:#182033;font-size:12px">Size cap on every answer</text>
+<path d="M392 830V892" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="892" width="380" height="46" rx="8" fill="#fff" stroke="#a9c8e6" stroke-width="1.3"/>
+<text x="214.0" y="911" text-anchor="middle">Claude reads masked results and answers</text><text class="sub" x="214.0" y="928" text-anchor="middle">Repeats tool calls until it has enough; writes in tokens</text>
+<path d="M404 915H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="892" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="919" text-anchor="middle" style="fill:#182033;font-size:12px">Claude only sees tokens; answers are expected to cite tool results</text>
+<circle cx="14" cy="915" r="4.5" fill="#d4537e"/>
+<path d="M392 938V1000" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#e2e-a)"/>
+<rect x="24" y="1000" width="380" height="46" rx="8" fill="#fff" stroke="#c9c5ee" stroke-width="1.3"/>
+<text x="214.0" y="1019" text-anchor="middle">Gateway unmasks for display</text><text class="sub" x="214.0" y="1036" text-anchor="middle">Real names are restored in the UI only</text>
+<path d="M404 1023H436" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="436" y="1000" width="440" height="46" rx="8" fill="#fff4e5" stroke="#e0a050" stroke-width="1.2"/>
+<text class="sub" x="656.0" y="1027" text-anchor="middle" style="fill:#182033;font-size:12px">Only the session owner can see the result</text>
+<circle cx="14" cy="1023" r="4.5" fill="#d4537e"/>
+</svg></div>
+      <h4>How the vault is created</h4>
+      <ol class="steps-list">
+        <li><strong>Session first.</strong> A random sessionId is created and saved against the logged-in user. Only that user can stream or replay the run.</li>
+        <li><strong>Vault second.</strong> An empty table maps real names to tokens for that one session. The same name always gets the same token inside a session.</li>
+        <li><strong>Names are found, not guessed.</strong> Every word in the prompt, logs, traces and files is checked against the repository's own symbol index of classes, methods, tables and packages. Ordinary words such as "service" are not treated as secrets.</li>
+        <li><strong>The agent never handles the id.</strong> The runner attaches the sessionId to every tool call, so Claude cannot choose or guess another session.</li>
+      </ol>
+      <h4>Audit trail and graphs</h4>
+      <div class="diagram"><svg viewBox="0 0 900 190" role="img" aria-label="Audit trail: each audited step writes a row, blocks are logged as events with the reason only, the gateway streams rows to the session owner, and the UI draws a run graph and a code graph.">
+<defs><marker id="au-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#657087"/></marker></defs>
+<g fill="#fff" stroke="#c9c5ee" stroke-width="1.3">
+<rect x="10" y="40" width="200" height="80" rx="9"/><rect x="238" y="40" width="200" height="80" rx="9"/><rect x="466" y="40" width="200" height="80" rx="9"/><rect x="694" y="40" width="196" height="80" rx="9" fill="#eeecff" stroke="#5546c7"/></g>
+<g stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#au-a)"><path d="M210 80H236"/><path d="M438 80H464"/><path d="M666 80H692"/></g>
+<text x="110" y="68" text-anchor="middle">Step writes a row</text><text class="sub" x="110" y="87" text-anchor="middle">Node, input, output,</text><text class="sub" x="110" y="102" text-anchor="middle">time, tokens, parent</text>
+<text x="338" y="68" text-anchor="middle">Blocks are events</text><text class="sub" x="338" y="87" text-anchor="middle">Leak withheld, budget hit,</text><text class="sub" x="338" y="102" text-anchor="middle">code dump; reason only</text>
+<text x="566" y="68" text-anchor="middle">Gateway streams rows</text><text class="sub" x="566" y="87" text-anchor="middle">Live, to the session</text><text class="sub" x="566" y="102" text-anchor="middle">owner only</text>
+<text x="792" y="68" text-anchor="middle">UI draws two graphs</text><text class="sub" x="792" y="87" text-anchor="middle">Run graph: what ran</text><text class="sub" x="792" y="102" text-anchor="middle">Code graph: masked names</text>
+<text class="sub" x="10" y="26" style="font-weight:600;fill:#5546c7">Audit trail and node graphs</text>
+<text class="sub" x="10" y="160">Each row is a node in the run graph; its parent id is the edge. The code graph is built from retrieval results and holds pseudonyms only.</text>
+</svg></div>
+      <p class="note"><strong>Design note:</strong> security events record the reason for a block, never the payload, so the audit trail does not become a second place where sensitive content is stored.</p>
+    </div>
+    <div role="tabpanel" id="oc-p5" aria-labelledby="oc-t5" class="panel" hidden>
+      <p>Take the question <em>“explain comment sync in the SDK”</em>. The search runs against an index of the repository that was built earlier with Tree-sitter: code nodes, call edges and a full-text table. Nothing is searched by reading raw files at question time.</p>
+      <div class="diagram"><svg viewBox="0 0 900 330" role="img" aria-label="Retrieval: the masked question runs three searches in parallel (keywords, call graph, meaning), results are merged by reciprocal rank fusion into the top ten, then real code outlines are read on-premises, masked, scanned and returned page by page.">
+<defs><marker id="rt-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#657087"/></marker></defs>
+<g stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#rt-a)"><path d="M170 165H200V55H230"/><path d="M170 165H230"/><path d="M170 165H200V275H230"/><path d="M450 55H480V165H510"/><path d="M450 165H510"/><path d="M450 275H480V165H510"/><path d="M670 165H700"/></g>
+<g stroke-width="1.3"><rect x="20" y="130" width="150" height="70" rx="9" fill="#eaf3fb" stroke="#3b78b5"/>
+<rect x="230" y="20" width="220" height="70" rx="9" fill="#fff" stroke="#a7d4c6"/><rect x="230" y="130" width="220" height="70" rx="9" fill="#fff" stroke="#a7d4c6"/><rect x="230" y="240" width="220" height="70" rx="9" fill="#fff" stroke="#a7d4c6"/>
+<rect x="510" y="130" width="160" height="70" rx="9" fill="#e8f5f0" stroke="#167a61"/><rect x="700" y="115" width="190" height="100" rx="9" fill="#fff" stroke="#a7d4c6"/></g>
+<text x="95" y="160" text-anchor="middle">Masked question</text><text class="sub" x="95" y="178" text-anchor="middle">words &gt; 2 letters</text>
+<text x="340" y="48" text-anchor="middle">Keywords</text><text class="sub" x="340" y="66" text-anchor="middle">BM25 on a full-text index</text><text class="sub" x="340" y="80" text-anchor="middle">weight 1.6</text>
+<text x="340" y="158" text-anchor="middle">Call graph</text><text class="sub" x="340" y="176" text-anchor="middle">Callers and callees of top hits</text><text class="sub" x="340" y="190" text-anchor="middle">weight 0.7</text>
+<text x="340" y="268" text-anchor="middle">Meaning</text><text class="sub" x="340" y="286" text-anchor="middle">Local embedding similarity</text><text class="sub" x="340" y="300" text-anchor="middle">weight 1.0</text>
+<text x="590" y="158" text-anchor="middle">RRF merge</text><text class="sub" x="590" y="176" text-anchor="middle">Top 10 by rank</text><text class="sub" x="590" y="190" text-anchor="middle">k = 60</text>
+<text x="795" y="148" text-anchor="middle">Mask and return</text><text class="sub" x="795" y="168" text-anchor="middle">Read real code outline,</text><text class="sub" x="795" y="182" text-anchor="middle">mask names, scan,</text><text class="sub" x="795" y="196" text-anchor="middle">cap size, paginate</text>
+</svg></div>
+      <h4>What happens, step by step</h4>
+      <ol class="steps-list">
+        <li><strong>Clean the question.</strong> Lowercase it and keep words longer than two letters: comment, sync, sdk.</li>
+        <li><strong>Keyword search.</strong> A full-text index returns the best-matching symbols. The top hits become seeds for the next step.</li>
+        <li><strong>Call graph.</strong> Each seed passes part of its score to its callers and callees. Neighbours whose names share no word with the question keep only a quarter of the boost.</li>
+        <li><strong>Meaning search.</strong> A small local embedding model compares the question with each symbol's name, signature and docstring.</li>
+        <li><strong>Merge with RRF.</strong> The three ranked lists become one ranking; the top ten move on.</li>
+        <li><strong>Mask and return.</strong> Real code outlines are read on-premises, names are replaced by tokens, the scanner checks the result, and a size-capped page goes back to the cloud model.</li>
+      </ol>
+      <div class="two-col">
+        <article class="info-box"><h4>What RRF means</h4><p>Reciprocal Rank Fusion merges ranked lists using only each item's position, not its raw score. Every list gives 1 ÷ (60 + rank) and the scores are added. Something several searches like beats something only one likes.</p></article>
+        <article class="info-box"><h4>Why weights differ</h4><p>Keywords count most (1.6) because they follow what the user typed. Meaning counts 1.0 and the call graph 0.7, as supporting evidence. If one search returns nothing, the others still work.</p></article>
+      </div>
+      <p class="note"><strong>Honest limit:</strong> retrieval quality has not yet been measured against labelled questions. The current benchmark only checks for leaks, speed and a rough keyword hit rate.</p>
+    </div>
+    <div role="tabpanel" id="oc-p6" aria-labelledby="oc-t6" class="panel" hidden>
+      <p>The evals focus first on the promise that matters most: nothing real should cross the boundary, and the tools cannot be abused. They run as automated tests and scripts against a small sample repository.</p>
+      <div class="dialog-stats">
+        <article><strong>28</strong><span>Red-team attacks in an automated suite</span></article>
+        <article><strong>8</strong><span>Pre-flight health checks</span></article>
+        <article><strong>10</strong><span>Tools probed for leaks per run</span></article>
+        <article><strong>0</strong><span>Leaks tolerated: any hit fails the run</span></article>
+      </div>
+      <div class="diagram"><svg viewBox="0 0 900 1136" role="img" aria-label="OmniCode evaluation flow in five steps: setup health checks, unit tests, 28 red-team attacks, a benchmark, and a release gate.">
+<defs><marker id="ev-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#657087"/></marker></defs>
+<text x="174.0" y="18" text-anchor="middle" style="fill:#657087;font-size:12px">What is checked</text><text x="611.0" y="18" text-anchor="middle" style="fill:#657087;font-size:12px">How it is done</text>
+<rect x="4" y="40" width="892" height="152" rx="12" fill="#f1f0ff" stroke="#5546c7" stroke-width="1.2"/>
+<text x="24" y="61" style="font-weight:700;fill:#5546c7">Step 1 · Is the setup healthy?</text>
+<rect x="4" y="210" width="892" height="276" rx="12" fill="#eaf3fb" stroke="#3b78b5" stroke-width="1.2"/>
+<text x="24" y="231" style="font-weight:700;fill:#3b78b5">Step 2 · Do the parts work? (unit tests)</text>
+<rect x="4" y="504" width="892" height="338" rx="12" fill="#e8f5f0" stroke="#167a61" stroke-width="1.2"/>
+<text x="24" y="525" style="font-weight:700;fill:#167a61">Step 3 · Can it be broken? (28 attacks)</text>
+<rect x="4" y="860" width="892" height="152" rx="12" fill="#fff8ec" stroke="#c98a1b" stroke-width="1.2"/>
+<text x="24" y="881" style="font-weight:700;fill:#c98a1b">Step 4 · How fast, any leaks? (benchmark)</text>
+<rect x="4" y="1030" width="892" height="90" rx="12" fill="#f1f0ff" stroke="#5546c7" stroke-width="1.2"/>
+<text x="24" y="1051" style="font-weight:700;fill:#5546c7">Step 5 · Release gate</text>
+<rect x="24" y="72" width="300" height="46" rx="8" fill="#fff" stroke="#c9c5ee" stroke-width="1.3"/>
+<text x="174.0" y="91" text-anchor="middle">Doctor: 8 health checks</text><text class="sub" x="174.0" y="108" text-anchor="middle">Claude, DB, index, scanner, tools</text>
+<path d="M324 95H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="72" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="99" text-anchor="middle" style="fill:#182033;font-size:12px">A command run before use; each failed check is shown</text>
+<path d="M174.0 118V132" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="134" width="300" height="46" rx="8" fill="#fff" stroke="#c9c5ee" stroke-width="1.3"/>
+<text x="174.0" y="153" text-anchor="middle">Hardcode guard</text><text class="sub" x="174.0" y="170" text-anchor="middle">No company or repo names in framework code</text>
+<path d="M324 157H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="134" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="161" text-anchor="middle" style="fill:#182033;font-size:12px">Scans source for banned words; any hit fails the run</text>
+<path d="M312 180V242" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="242" width="300" height="46" rx="8" fill="#fff" stroke="#a9c8e6" stroke-width="1.3"/>
+<text x="174.0" y="261" text-anchor="middle">Leak boundary tests</text><text class="sub" x="174.0" y="278" text-anchor="middle">10 tools called on a sample repo</text>
+<path d="M324 265H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="242" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="269" text-anchor="middle" style="fill:#182033;font-size:12px">Scanner must find zero real names and no raw code bodies</text>
+<path d="M174.0 288V302" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="304" width="300" height="46" rx="8" fill="#fff" stroke="#a9c8e6" stroke-width="1.3"/>
+<text x="174.0" y="323" text-anchor="middle">Masking tests</text><text class="sub" x="174.0" y="340" text-anchor="middle">Same name, same token</text>
+<path d="M324 327H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="304" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="331" text-anchor="middle" style="fill:#182033;font-size:12px">Real names in, tokens out; ordinary words are not flagged</text>
+<path d="M174.0 350V364" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="366" width="300" height="46" rx="8" fill="#fff" stroke="#a9c8e6" stroke-width="1.3"/>
+<text x="174.0" y="385" text-anchor="middle">Fail-closed tests</text><text class="sub" x="174.0" y="402" text-anchor="middle">Empty or missing index</text>
+<path d="M324 389H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="366" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="393" text-anchor="middle" style="fill:#182033;font-size:12px">No index means block, never a silent pass</text>
+<path d="M174.0 412V426" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="428" width="300" height="46" rx="8" fill="#fff" stroke="#a9c8e6" stroke-width="1.3"/>
+<text x="174.0" y="447" text-anchor="middle">Tool and hook tests</text><text class="sub" x="174.0" y="464" text-anchor="middle">Exactly 8 tools exposed</text>
+<path d="M324 451H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="428" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="455" text-anchor="middle" style="fill:#182033;font-size:12px">A hook can block or modify but cannot loosen masking</text>
+<path d="M312 474V536" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="536" width="300" height="46" rx="8" fill="#fff" stroke="#a7d4c6" stroke-width="1.3"/>
+<text x="174.0" y="555" text-anchor="middle">Steal real names</text><text class="sub" x="174.0" y="572" text-anchor="middle">Decoder call, vault query, forced leak</text>
+<path d="M324 559H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="536" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="563" text-anchor="middle" style="fill:#182033;font-size:12px">Must return an error or reveal nothing real (3 attacks)</text>
+<path d="M174.0 582V596" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="598" width="300" height="46" rx="8" fill="#fff" stroke="#a7d4c6" stroke-width="1.3"/>
+<text x="174.0" y="617" text-anchor="middle">Database tricks</text><text class="sub" x="174.0" y="634" text-anchor="middle">SQL injection through the table name</text>
+<path d="M324 621H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="598" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="625" text-anchor="middle" style="fill:#182033;font-size:12px">Illegal characters rejected before any query (5)</text>
+<path d="M174.0 644V658" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="660" width="300" height="46" rx="8" fill="#fff" stroke="#a7d4c6" stroke-width="1.3"/>
+<text x="174.0" y="679" text-anchor="middle">Path and command tricks</text><text class="sub" x="174.0" y="696" text-anchor="middle">../ escapes, pipes, semicolons</text>
+<path d="M324 683H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="660" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="687" text-anchor="middle" style="fill:#182033;font-size:12px">Paths must stay inside the repo, else blocked (5)</text>
+<path d="M174.0 706V720" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="722" width="300" height="46" rx="8" fill="#fff" stroke="#a7d4c6" stroke-width="1.3"/>
+<text x="174.0" y="741" text-anchor="middle">Hidden instructions</text><text class="sub" x="174.0" y="758" text-anchor="middle">In logs, XML, docs; base64, rot13, nulls</text>
+<path d="M324 745H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="722" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="749" text-anchor="middle" style="fill:#182033;font-size:12px">Never obeyed; output stays free of real names (7)</text>
+<path d="M174.0 768V782" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="784" width="300" height="46" rx="8" fill="#fff" stroke="#a7d4c6" stroke-width="1.3"/>
+<text x="174.0" y="803" text-anchor="middle">Abuse the on-prem model</text><text class="sub" x="174.0" y="820" text-anchor="middle">Code dumps, hex, base64, flooding</text>
+<path d="M324 807H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="784" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="811" text-anchor="middle" style="fill:#182033;font-size:12px">Dump detector, call cap, kill switches, audit check (8)</text>
+<path d="M312 830V892" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="892" width="300" height="46" rx="8" fill="#fff" stroke="#ecd29a" stroke-width="1.3"/>
+<text x="174.0" y="911" text-anchor="middle">4 sample questions on a sample repo</text><text class="sub" x="174.0" y="928" text-anchor="middle">Search, call graph, DB schema each</text>
+<path d="M324 915H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="892" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="919" text-anchor="middle" style="fill:#182033;font-size:12px">Scanner checks every output; any leak fails the run</text>
+<path d="M174.0 938V952" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="954" width="300" height="46" rx="8" fill="#fff" stroke="#ecd29a" stroke-width="1.3"/>
+<text x="174.0" y="973" text-anchor="middle">JSON baseline report</text><text class="sub" x="174.0" y="990" text-anchor="middle">Latency, leaks, keyword hit rate</text>
+<path d="M324 977H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="954" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="981" text-anchor="middle" style="fill:#182033;font-size:12px">Kept to compare after changes; hit rate is a rough proxy only</text>
+<path d="M312 1000V1062" stroke="#657087" stroke-width="1.5" fill="none" marker-end="url(#ev-a)"/>
+<rect x="24" y="1062" width="300" height="46" rx="8" fill="#fff" stroke="#c9c5ee" stroke-width="1.3"/>
+<text x="174.0" y="1081" text-anchor="middle">Deployment script</text><text class="sub" x="174.0" y="1098" text-anchor="middle">Health checks, then the 28 attacks</text>
+<path d="M324 1085H346" stroke="#c9c5ee" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+<rect x="346" y="1062" width="530" height="46" rx="8" fill="#eaf3fb" stroke="#a9c8e6" stroke-width="1.2"/>
+<text class="sub" x="611.0" y="1089" text-anchor="middle" style="fill:#182033;font-size:12px">Stops on any failure; other checks run by hand</text>
+</svg></div>
+      <h4>The 28 attacks in five groups</h4>
+      <div class="table-wrap"><table><thead><tr><th>Group</th><th>Examples</th><th>Expected result</th></tr></thead><tbody>
+        <tr><th>Steal real names</th><td>Call a decoder, query the vault, force a leak</td><td>Error, or nothing real in the output</td></tr>
+        <tr><th>Database tricks</th><td>UNION SELECT, stacked DROP, comment bypass, null byte</td><td>Rejected before any query</td></tr>
+        <tr><th>Path and command</th><td>../ escapes, pipes, semicolons in paths</td><td>Blocked or not found</td></tr>
+        <tr><th>Hidden instructions</th><td>Injection in logs, XML, docs; base64, rot13, zero-width characters</td><td>Never obeyed; no real names in output</td></tr>
+        <tr><th>Abuse the on-prem model</th><td>Code dumps, hex and base64 payloads, call flooding, kill switches</td><td>Dump detector fires, call cap enforced, audit stays content-free</td></tr>
+      </tbody></table></div>
+      <p class="note"><strong>Not covered yet:</strong> answer quality on real bugs, citation checks, retrieval recall against labelled questions, and planted canary secrets run through the full cloud path. These are the next evals to add.</p>
+    </div>
+    <div role="tabpanel" id="oc-p7" aria-labelledby="oc-t7" class="panel" hidden>
+      <p>The same code ships three ways: as an installable Python library, as a Claude Code plugin, and as a container stack. A workspace file keeps it generic, so repository paths, masking patterns, the local model and the storage backend are configuration, not code.</p>
+      <div class="two-col">
+        <article class="info-box"><h4>Python library</h4><ul><li>Packaged with setuptools; commands for the MCP server, the gateway and database migrations.</li><li>Public API: workspace config, an agent that runs one masked turn, hooks, custom tools, storage.</li><li>Installed editable during development; a private wheel is the route for sharing. It is not published publicly.</li></ul></article>
+        <article class="info-box"><h4>Claude Code plugin</h4><ul><li>A folder with a manifest, the MCP server entry, two hooks, JSON specs and a reasoning contract.</li><li>The specs hold the tool allowlist, the denied built-in tools and the on-prem limits.</li><li>A small script zips it into a distributable package.</li></ul></article>
+      </div>
+      <h4>Hooks I wrote</h4>
+      <div class="table-wrap"><table><thead><tr><th>Hook</th><th>When it runs</th><th>What it does</th></tr></thead><tbody>
+        <tr><th>Pre-tool guard</th><td>Before every tool call</td><td>Allows only OmniCode tools; blocks anything else, and blocks if it cannot read the call</td></tr>
+        <tr><th>Prompt guard</th><td>When a prompt is submitted</td><td>Blocks prompts that contain real repository names; fails closed on errors</td></tr>
+        <tr><th>Lifecycle hooks (library)</th><td>Seven events: before prompt, after mask, before and after tool, on withheld, before and after answer</td><td>Handlers return allow, block or modify; a modified prompt is masked again so hooks cannot loosen masking</td></tr>
+      </tbody></table></div>
+      <h4>Deployment</h4>
+      <ul>
+        <li><strong>Windows setup script:</strong> creates a virtual environment, installs the library, runs the health checks, then the 28 attacks, and stops if any fail.</li>
+        <li><strong>Docker Compose:</strong> a Python image with a JDK and the Claude Code CLI, running as a non-root user, plus PostgreSQL. Index and vault live in a volume; the analysed repository is mounted from the host.</li>
+        <li><strong>On-prem model:</strong> reached over a local address; the health check confirms it is on loopback or an allowed host.</li>
+        <li><strong>Kill switches:</strong> one environment variable stops all tool execution; another disables only the on-prem tool.</li>
+      </ul>
+    </div>
+  </div>
+</dialog>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head"><div><p class="section-kicker">Professional experience</p><h2>Building and solving in production.</h2><p class="section-intro">Customer-facing engineering at OpsHub, with a focus on enterprise integrations, backend capabilities and reliability.</p></div></div>
+    <article class="experience-card">
+      <div><p class="experience-date">May 2024 — Present</p><span class="experience-type">Full-time</span></div>
+      <div class="experience-content">
+        <h3>Software Engineer (L2)</h3><p class="company">OpsHub Technologies</p>
+        <p class="experience-summary">Work across customer solution delivery and product engineering: translating requirements into implementation approaches, extending connector capabilities, investigating production issues and demonstrating solutions directly to customers.</p>
+        <div class="impact-grid">
+          <article class="impact-item"><h4>Customer engineering and delivery</h4><p>Work directly with enterprise customers to understand requirements, design implementation approaches and resolve integration challenges, including live debugging during customer calls.</p></article>
+          <article class="impact-item"><h4>MBSE connector development</h4><p>Contributed to the Cameo connector proof of concept, extending product capabilities and demonstrating customer-requested use cases.</p></article>
+          <article class="impact-item"><h4>Conditional Entity Type Movement</h4><p>Designed and implemented rule-based routing between entity types, with a configuration experience aligned to the customer's mental model.</p></article>
+          <article class="impact-item"><h4>Core framework development</h4><p>Introduced metadata-driven method definitions to separate connector-specific behaviour from core framework logic and improve extensibility.</p></article>
+          <article class="impact-item"><h4>Performance and reliability</h4><p>Resolved heap-space failures when processing 100K+ entities and addressed duplicate revision processing to improve synchronization reliability.</p></article>
+          <article class="impact-item"><h4>AI-assisted engineering</h4><p>Built utilities to validate synchronized customer data against source systems and accelerate investigation of discrepancies.</p></article>
+          <article class="impact-item"><h4>Mentoring and knowledge sharing</h4><p>Mentored a summer 2025 intern, co-trained the winter internship programming course and supported interns working on an internal user-count utility.</p></article>
+          <article class="impact-item"><h4>Cross-connector improvements</h4><p>Contributed enhancements and fixes across connector workflows, reducing repeated implementation effort through shared configuration and framework capabilities.</p></article>
+        </div>
+        <p class="achievement"><strong>1st Runner-Up — 2025 Company Hackathon:</strong> Co-developed an “Efficient Failure Resolution” solution that reduced log investigation from approximately 10–15 minutes to a one-click workflow.</p>
+      </div>
+    </article>
+    <div class="selected-work">
+      <h3>Selected engineering work</h3>
+      <div class="work-grid">
+        <article class="work-card"><h4>Customer proof of concept and demos</h4><p>Worked through customer concerns about the proposed integration approach, implemented requested capabilities and demonstrated tailored use cases in customer sessions.</p></article>
+        <article class="work-card"><h4>AI-assisted data validation</h4><p>Built utilities to compare synchronized data with source-system information, helping surface discrepancies faster; explored LangChain and LangGraph for AI-driven engineering workflows.</p></article>
+        <article class="work-card"><h4>Reducing repeated connector effort</h4><p>Helped simplify entity and project movement through metadata settings rather than multiple connector-specific methods. Conditional Entity Type Movement is used by multiple customers.</p></article>
+        <article class="work-card"><h4>Improving large synchronization runs</h4><p>Addressed heap pressure and repeated revision processing for 100K+ entities, including marker-based revision handling and iterative processing improvements.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head"><div><p class="section-kicker">Technical toolkit</p><h2>Skills and technologies.</h2></div></div>
+    <div class="skills-grid">
+      <article class="skill-card"><h3>Backend engineering</h3><ul class="skill-chips"><li>Java</li><li>Spring Boot</li><li>REST APIs</li><li>Reactive Programming</li><li>Mono / Flux</li><li>Concurrency</li></ul></article>
+      <article class="skill-card"><h3>AI and LLM engineering</h3><ul class="skill-chips"><li>LLM Agents</li><li>RAG</li><li>LangChain</li><li>LangGraph</li><li>Model Context Protocol</li><li>Dify</li><li>Guardrails</li></ul></article>
+      <article class="skill-card"><h3>AI-assisted development</h3><ul class="skill-chips"><li>Claude Code</li><li>Antigravity</li><li>GitHub Spec Kit</li><li>Agentic Coding</li><li>Spec-Driven Development</li></ul></article>
+      <article class="skill-card"><h3>Developer tools and operations</h3><ul class="skill-chips"><li>Git</li><li>IntelliJ IDEA</li><li>ELK Stack</li><li>Log Analysis</li><li>Debugging</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head"><div><p class="section-kicker">Academic background</p><h2>Education.</h2></div></div>
+    <div class="education-list">
+      <article class="education-item"><div><h3>B.Tech — Pandit Deendayal Energy University</h3><p>2020–2024</p></div><strong class="education-score">CGPA 9.83</strong></article>
+      <article class="education-item"><div><h3>Higher Secondary (XII) — Puna International School</h3><p>CBSE · 2020</p></div><strong class="education-score">88.3%</strong></article>
+      <article class="education-item"><div><h3>Secondary (X) — Birla Sagar H.S. School</h3><p>CBSE · 2018</p></div><strong class="education-score">94.8%</strong></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="wrap contact-inner">
+    <div><p class="section-kicker">Get in touch</p><h2>Let’s build something useful.</h2><p>I’m interested in backend engineering and AI engineering opportunities. Feel free to reach out.</p></div>
+    <div class="contact-links" id="contact-links"></div>
+  </div>
+</section>
+</main>
+
+<script>
+/* Update this object when your contact details, photo or project assets change. */
+const SITE = {
+  email: "greshi716@gmail.com",
+  photo: "", // Example: "images/greshi.jpg". Leave empty to show initials.
+  linkedin: "https://www.linkedin.com/in/greshi-doshi-360b21209/",
+  github: "https://github.com/Greshi716",
+  campusflow: {
+    repo: "https://github.com/Greshi716/admin_management_system",
+    live: "https://campusflow-ocm8.onrender.com/admissions",
+    images: [] // Example: { src: "images/campusflow-dashboard.png", alt: "CampusFlow dashboard" }
+  },
+  omnicode: {
+    summary: "A working prototype exploring how a cloud reasoning model can investigate a proprietary Java codebase using masked metadata and controlled on-premises code analysis.",
+    stack: ["MCP", "Claude Code", "Tree-sitter", "On-prem LLM"],
+    repo: "https://github.com/Greshi716/omnicode_sample_codebase",
+    video: "https://drive.google.com/file/d/1TeM9O7nPNGtakNcqP1jawp0XnXxUB4gL/preview",
+    images: [] // Example: { src: "images/omnicode-flow.png", alt: "OmniCode architecture" }
+  }
+};
+
+const byId = (id) => document.getElementById(id);
+const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+}[char]));
+
+function externalLink(url, label, secondary = false) {
+  return `<a class="button small${secondary ? " secondary" : ""}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)} ↗</a>`;
+}
+function renderGallery(element, images) {
+  element.innerHTML = images.map((item) =>
+    `<a href="${escapeHtml(item.src)}" target="_blank" rel="noopener noreferrer"><img src="${escapeHtml(item.src)}" alt="${escapeHtml(item.alt || "Project screenshot")}" loading="lazy"></a>`
+  ).join("");
+}
+function renderTabs(list) {
+  const tabs = [...list.querySelectorAll('[role="tab"]')];
+  const activate = (tab, moveFocus = false) => {
+    tabs.forEach((item) => {
+      const selected = item === tab;
+      item.setAttribute("aria-selected", String(selected));
+      item.tabIndex = selected ? 0 : -1;
+      byId(item.getAttribute("aria-controls")).hidden = !selected;
+    });
+    if (moveFocus) tab.focus();
+  };
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => activate(tab));
+    tab.addEventListener("keydown", (event) => {
+      let nextIndex = index;
+      if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+      else if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === "Home") nextIndex = 0;
+      else if (event.key === "End") nextIndex = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      activate(tabs[nextIndex], true);
+    });
+  });
+  return () => activate(tabs[0]);
+}
+
+// Profile links
+const socialLinks = [];
+if (SITE.linkedin) socialLinks.push(`<a href="${escapeHtml(SITE.linkedin)}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>`);
+if (SITE.github) socialLinks.push(`<a href="${escapeHtml(SITE.github)}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>`);
+byId("hero-social").innerHTML = socialLinks.join("");
+const contactLinks = [externalLink(`mailto:${SITE.email}`, SITE.email)];
+if (SITE.linkedin) contactLinks.push(externalLink(SITE.linkedin, "LinkedIn", true));
+if (SITE.github) contactLinks.push(externalLink(SITE.github, "GitHub", true));
+byId("contact-links").innerHTML = contactLinks.join("");
+
+// Optional profile photo
+if (SITE.photo) {
+  byId("avatar").innerHTML = `<img src="${escapeHtml(SITE.photo)}" alt="Portrait of Greshi Doshi">`;
+}
+
+// CampusFlow assets and links
+renderGallery(byId("cf-gallery"), SITE.campusflow.images);
+const campusLinks = [];
+if (SITE.campusflow.repo) campusLinks.push(externalLink(SITE.campusflow.repo, "View source on GitHub"));
+if (SITE.campusflow.live) campusLinks.push(externalLink(SITE.campusflow.live, "Open live demo", true));
+byId("cf-links").innerHTML = campusLinks.join("");
+
+// OmniCode content and assets
+const omni = SITE.omnicode;
+byId("oc-summary").textContent = omni.summary;
+byId("oc-tags").innerHTML = omni.stack.map((tag) => `<li>${escapeHtml(tag)}</li>`).join("");
+byId("oc-card-summary").textContent = omni.summary;
+byId("oc-card-tags").innerHTML = omni.stack.map((tag) => `<li>${escapeHtml(tag)}</li>`).join("");
+if (omni.video) {
+  const video = byId("oc-video");
+  video.hidden = false;
+  video.innerHTML = /\.(mp4|webm)$/i.test(omni.video)
+    ? `<video controls preload="metadata" src="${escapeHtml(omni.video)}"></video>`
+    : `<iframe src="${escapeHtml(omni.video)}" title="OmniCode demonstration video" allow="fullscreen; picture-in-picture" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
+}
+renderGallery(byId("oc-gallery"), omni.images);
+byId("oc-links").innerHTML = omni.repo ? externalLink(omni.repo, "View source on GitHub") : "";
+
+// Accessible project dialogs and tabs
+const resetTabs = new Map();
+document.querySelectorAll('[role="tablist"]').forEach((list) => resetTabs.set(list, renderTabs(list)));
+document.querySelectorAll("[data-open]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const dialog = byId(button.dataset.open);
+    const tabList = dialog.querySelector('[role="tablist"]');
+    if (tabList && resetTabs.has(tabList)) resetTabs.get(tabList)();
+    dialog.showModal();
+  });
+});
+document.querySelectorAll("dialog").forEach((dialog) => {
+  dialog.querySelector("[data-close]").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+});
+
+// Mobile navigation
+const menuToggle = byId("menu-toggle");
+const mainNav = byId("main-nav");
+menuToggle.addEventListener("click", () => {
+  const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+  menuToggle.setAttribute("aria-expanded", String(!isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Open navigation" : "Close navigation");
+  menuToggle.textContent = isOpen ? "☰" : "✕";
+  mainNav.classList.toggle("open", !isOpen);
+});
+mainNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+  mainNav.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Open navigation");
+  menuToggle.textContent = "☰";
+}));
+
+byId("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
