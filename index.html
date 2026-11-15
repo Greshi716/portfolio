@@ -39,8 +39,7 @@ img{max-width:100%}
 .nav{display:flex;align-items:center;gap:25px}
 .nav a{font-size:.91rem;font-weight:600;color:var(--muted);text-decoration:none}
 .nav a:hover,.nav a[aria-current="location"]{color:var(--accent)}
-.nav .resume-link{color:#fff;font-style:normal}
-a[href$="Greshi_Doshi_Resume.pdf"]{font-style:normal}
+.nav .-link{color:#fff;font-style:normal}
 .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:10px 17px;border:1px solid var(--accent);border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;font-size:.92rem;transition:transform .18s ease,background .18s ease,border-color .18s ease}
 .button:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff;transform:translateY(-2px)}
 .button.secondary{background:transparent;color:var(--ink);border-color:var(--line)}
@@ -236,7 +235,6 @@ tbody th{font:700 .86rem var(--display);white-space:nowrap}
     <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">☰</button>
     <nav class="nav" id="main-nav" aria-label="Main navigation">
       <a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a>
-      <a class="button small resume-link" href="Greshi_Doshi.pdf" download>Download resume ↓</a>
     </nav>
   </div>
 </header>
@@ -251,7 +249,6 @@ tbody th{font:700 .86rem var(--display);white-space:nowrap}
       <p class="hero-copy">I build <strong>reliable backend systems and enterprise integrations</strong> with Java and Spring Boot. I’m also exploring practical AI engineering through LLM agents, MCP, RAG and structured, AI-assisted development.</p>
       <div class="hero-actions">
         <a class="button" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
-        <a class="button secondary" href="Greshi_Doshi.pdf" download>Download resume</a>
       </div>
       <div class="social-links" id="hero-social" aria-label="Social profiles"></div>
     </div>
